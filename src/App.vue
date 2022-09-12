@@ -1,32 +1,37 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view />
-  </div>
+  <v-app>
+    <v-app-bar app clipped-left>
+      <v-app-bar-nav-icon />
+      <v-icon class="mx-4" large>mdi-video</v-icon>
+      <v-toolbar-tittle class="align-center">
+        <span class="tittle">VideoPage</span>
+      </v-toolbar-tittle>
+      <v-spacer />
+      <v-text-field
+        solo
+        placeholder="Ara...."
+        single-line
+        append-icon="mdi-magnify"
+        color="white"
+      />
+      <v-spacer />
+      <v-btn class="m1-0" icon>
+        <v-icon>mdi-apps</v-icon>
+      </v-btn>
+      <v-btn class="ma-2" icon>
+        <v-icon>mdi-bell</v-icon>
+      </v-btn>
+    </v-app-bar>
+    <div>test</div>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+export default {
+  name: "App",
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+  data: () => ({
+    //
+  }),
+};
+</script>
